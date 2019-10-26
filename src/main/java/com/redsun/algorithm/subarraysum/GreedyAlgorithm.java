@@ -29,18 +29,25 @@ public class GreedyAlgorithm extends SubArraySum {
 
             // 寻找 minStart，minStart[j] = min(minStart[j-1],sum[0..j])
             if (sumStart < minStart) {
+                minStart = sumStart;
+
                 /**
                  * 如果此时sum[0..(endIndex - 1)](即sumStart) < minStart
-                 * 则最大子数组的start只可能从start开始
+                 * 则最大子数组的start只可能从endIndex开始
+                 *
+                 * 通俗一点就是endIndex（0~endIndex-1）之前的都已经被赋给minStart了
                  */
                 this.start = endIndex;
-                minStart = sumStart;
             }
 
             // 更新 sumTotal
             if (sumEnd - minStart > maxSum) {
-                this.end = endIndex;// 如果sumTotal值变动，说明最大子数组的end值为当前endIndex
                 maxSum = sumEnd - minStart;
+
+                /**
+                 * 如果maxSum值变动，说明最大子数组的end值为当前endIndex
+                 */
+                this.end = endIndex;
             }
             sumStart = sumStart + arr[endIndex];
         }
