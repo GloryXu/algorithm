@@ -22,9 +22,11 @@ public abstract class SubArraySum {
      */
     public abstract void execute();
 
+    public abstract String getAlgorithmName();
+
     @Override
     public String toString() {
-        return "运行结果{" +
+        return getAlgorithmName() + ":运行结果{" +
                 "子数组起始位置=" + start +
                 ", 子数组结束位置=" + end +
                 ", 子数组和=" + maxSum +

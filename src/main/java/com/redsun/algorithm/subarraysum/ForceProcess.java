@@ -32,4 +32,8 @@ public class ForceProcess extends SubArraySum{
         }
     }
 
+    public String getAlgorithmName() {
+        return "暴力破解";
+    }
+
 }

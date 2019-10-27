@@ -16,6 +16,10 @@ public class SplitArray extends SubArraySum {
         maxSum = findMaxChildArr(arr, 0, arr.length - 1);
     }
 
+    public String getAlgorithmName() {
+        return "分治法";
+    }
+
     /**
      * 找出最大子数组
      *

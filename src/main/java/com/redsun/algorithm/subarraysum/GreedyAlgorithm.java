@@ -53,4 +53,8 @@ public class GreedyAlgorithm extends SubArraySum {
         }
     }
 
+    public String getAlgorithmName() {
+        return "贪心算法";
+    }
+
 }
