@@ -2,12 +2,12 @@ package com.redsun.algorithm.subarraysum;
 
 /**
  * @author xuguangrong
- * @description 双循环解决，也就是常说的暴力破解
+ * @description 暴力破解
  * @date Created at 19:04 2019/10/19
  */
-public class DoubleLoop extends SubArraySum{
+public class ForceProcess extends SubArraySum{
 
-    public DoubleLoop(int[] arr) {
+    public ForceProcess(int[] arr) {
         super(arr);
     }
 

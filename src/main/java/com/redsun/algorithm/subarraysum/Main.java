@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args) {
         int[] array = new int[]{-1, 1, 2, 8, -1, 4, 1, 2, 8, -8, -4, 6, -9, 10};
 
-        // 双循环暴力破解
-        DoubleLoop doubleLoop = new DoubleLoop(array);
-        doubleLoop.execute();
-        System.out.println(doubleLoop);
+        // 暴力破解
+        ForceProcess forceProcess = new ForceProcess(array);
+        forceProcess.execute();
+        System.out.println(forceProcess);
 
         // 分治法
         SplitArray splitArray = new SplitArray(array);
